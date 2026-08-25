@@ -97,6 +97,27 @@
       "homepage": "https://github.com/Amazed-Labs/llm-pqr",
       "api_version": 1,
       "added_at": "2026-08-24"
+    },
+    {
+      "name": "plur",
+      "description": "Persistent memory that improves over time \u2014 learn, recall, inject, forget, feedback, meta-engram extraction. Feedback-trained retrieval, forgetting, hybrid BM25+embeddings search, cross-device git sync, and knowledge packs. Zero cloud, works offline.",
+      "author": "plur-ai",
+      "repo": "plur-ai/plur",
+      "subdir": "packages/hermes",
+      "ref": "7e7aff387d7c9ff516f336656829af7005a095df",
+      "homepage": "https://plur.ai",
+      "tags": [
+        "memory-provider",
+        "memory",
+        "engrams",
+        "recall",
+        "learning"
+      ],
+      "capabilities": [
+        "memory"
+      ],
+      "api_version": 1,
+      "added_at": "2026-08-25"
     }
   ]
 }
