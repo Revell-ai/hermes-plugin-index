@@ -144,6 +144,27 @@
       ],
       "api_version": 1,
       "added_at": "2026-08-25"
+    },
+    {
+      "name": "plur",
+      "description": "Persistent memory that improves over time — learn, recall, inject, forget, feedback, meta-engram extraction. Feedback-trained retrieval, forgetting, hybrid BM25+embeddings search, cross-device git sync, and knowledge packs. Zero cloud, works offline.",
+      "author": "plur-ai",
+      "repo": "plur-ai/plur",
+      "subdir": "packages/hermes",
+      "ref": "b93e32d3b9f856bb5eb908f3bf85f637c0599d69",
+      "homepage": "https://plur.ai",
+      "tags": [
+        "memory-provider",
+        "memory",
+        "engrams",
+        "recall",
+        "learning"
+      ],
+      "capabilities": [
+        "memory"
+      ],
+      "api_version": 1,
+      "added_at": "2026-08-29"
     }
   ]
 }
