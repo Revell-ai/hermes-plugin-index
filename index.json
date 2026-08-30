@@ -144,6 +144,25 @@
       ],
       "api_version": 1,
       "added_at": "2026-08-25"
+    },
+    {
+      "name": "ledgermind-hermes",
+      "description": "Capture Hermes rounds and connect bounded memory context to LedgerMind.",
+      "author": "sl4m3",
+      "tags": [
+        "memory",
+        "persistent-memory",
+        "context",
+        "ledgermind"
+      ],
+      "repo": "sl4m3/hermes-ledgermind",
+      "ref": "3d408146e999ab5a108879801aa381e26b80e61c",
+      "homepage": "https://github.com/sl4m3/hermes-ledgermind",
+      "capabilities": [
+        "memory"
+      ],
+      "api_version": 1,
+      "added_at": "2026-08-30"
     }
   ]
 }
