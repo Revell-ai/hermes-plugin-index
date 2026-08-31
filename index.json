@@ -144,6 +144,29 @@
       ],
       "api_version": 1,
       "added_at": "2026-08-25"
+    },
+    {
+      "name": "corpus",
+      "description": "Citation-backed US legal research and business-formation drafts. Portable Agent Plugin with two skills plus hosted MCP at corpuslaw.us. The agent never files and never collects an SSN.",
+      "author": "Corpus",
+      "tags": [
+        "legal",
+        "law",
+        "formation",
+        "llc",
+        "compliance",
+        "mcp",
+        "agent-plugin"
+      ],
+      "repo": "teakesdev/corpus-agent-kit",
+      "ref": "07a0e831c6ef8caa419168e3a4d9bdc35121c840",
+      "subdir": "plugins/corpus",
+      "homepage": "https://corpuslaw.us",
+      "capabilities": [
+        "skills"
+      ],
+      "api_version": 1,
+      "added_at": "2026-08-31"
     }
   ]
 }
