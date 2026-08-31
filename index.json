@@ -144,6 +144,27 @@
       ],
       "api_version": 1,
       "added_at": "2026-08-25"
+    },
+    {
+      "name": "plur",
+      "description": "Persistent memory that improves over time — learn, recall, inject, forget, feedback, meta-engram extraction. Feedback-trained retrieval, forgetting, hybrid BM25+embeddings search, cross-device git sync, and knowledge packs. Store and retrieval are local — YAML on disk, BM25 plus a local embedding model, no external service for storing or selecting an engram; injected engrams ride on the request you were already sending, so PLUR opens no network path of its own. Optional git-based sync if you enable it.",
+      "author": "plur-ai",
+      "repo": "plur-ai/plur",
+      "subdir": "packages/hermes",
+      "ref": "cf01e9f99f7828dbf1ef62de825cdb482c02875f",
+      "homepage": "https://plur.ai",
+      "tags": [
+        "memory-provider",
+        "memory",
+        "engrams",
+        "recall",
+        "learning"
+      ],
+      "capabilities": [
+        "memory"
+      ],
+      "api_version": 1,
+      "added_at": "2026-08-31"
     }
   ]
 }
