@@ -199,6 +199,24 @@
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/drag-to-pin-session",
       "api_version": 1,
       "added_at": "2026-09-01"
+    },
+    {
+      "name": "guard-mode",
+      "description": "SafeHermes: a pre_tool_call guard plus four user-typed slash commands (/readonly, /writemode, /automode, /guardstatus) to switch the guard between readonly, project-confined write, and auto modes. The agent cannot invoke the slash commands itself, so it cannot change its own restrictions.",
+      "author": "cseliot",
+      "repo": "CSEliot/SafeHermes",
+      "ref": "d6c6be04c7417bdb7485a92de5e5396e7da203fc",
+      "homepage": "https://github.com/CSEliot/SafeHermes",
+      "tags": [
+        "security",
+        "guard",
+        "slash-commands"
+      ],
+      "capabilities": [
+        "cli"
+      ],
+      "api_version": 1,
+      "added_at": "2026-09-02"
     }
   ]
 }
