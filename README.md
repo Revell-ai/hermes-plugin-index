@@ -72,6 +72,18 @@ cannot. What was reviewed is what installs.
 - Entries may be removed if the repo disappears, goes private, or is reported
   malicious.
 
+### Automated check
+
+A check runs on pull requests that touch `index.json` and writes what it found
+to the run summary. It separates what blocks a merge from what only needs a
+look — a missing recommended field will not fail the run.
+
+Two things worth knowing before it surprises you. It cannot tell whether you
+maintain a repository you do not own, because org membership is usually
+private, so where that applies it asks a maintainer rather than guessing
+either way. And anything it finds in entries your PR did not touch is reported
+separately and is not yours to fix.
+
 ### Reporting a plugin problem
 
 Open it on that plugin's own repo, not here. This index carries metadata; it
