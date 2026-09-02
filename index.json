@@ -256,6 +256,26 @@
       ],
       "api_version": 1,
       "added_at": "2026-09-01"
+    },
+    {
+      "name": "scroll-on-switch",
+      "description": "Always land at the bottom of the transcript when switching to a session, including newly mounted sessions.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "sessions",
+        "scroll",
+        "ui"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/scroll-on-switch",
+      "ref": "bae84a627b00ecb65808d4b99137fb0305bca846",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/scroll-on-switch",
+      "capabilities": [
+        "desktop-ui"
+      ],
+      "api_version": 1,
+      "added_at": "2026-09-01"
     }
   ]
 }
