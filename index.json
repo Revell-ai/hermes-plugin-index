@@ -276,6 +276,26 @@
       ],
       "api_version": 1,
       "added_at": "2026-09-01"
+    },
+    {
+      "name": "busy-shortcuts",
+      "description": "Compact Hermes commands for busy-input modes: /i selects interrupt and /s selects steer. Hermes' built-in /q remains the queue command.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "commands",
+        "shortcuts",
+        "busy-input"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "4270e203076f1a81a18da5f75250d80deb98b704",
+      "subdir": "plugins/busy-shortcuts",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/busy-shortcuts",
+      "capabilities": [
+        "commands"
+      ],
+      "api_version": 1,
+      "added_at": "2026-09-01"
     }
   ]
 }
