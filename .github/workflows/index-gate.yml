@@ -1,0 +1,55 @@
+# Checks index.json against the rules stated in README.md and writes a readout
+# to the run summary, so a submission can be answered without reading the diff
+# by hand.
+#
+# Deliberately `pull_request` and not `pull_request_target`: the latter would
+# run with write access in the context of a fork's code, which is how index
+# repositories get turned into a way to reach their own org. This job needs
+# nothing but read, so it takes nothing but read, and reports through the run
+# summary rather than by posting anywhere.
+name: Index gate
+
+on:
+  pull_request:
+    paths:
+      - index.json
+      - scripts/validate_index.py
+      - .github/workflows/index-gate.yml
+  # Auditing the whole index rather than one PR's changes.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Entry rules
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The base branch has to be present to work out which entries this
+          # PR is responsible for. Without it every pre-existing finding would
+          # be charged to whoever opened the PR.
+          fetch-depth: 0
+
+      - name: Check entries
+        env:
+          # Raises the API rate limit for the repo and commit lookups. Read
+          # scope on public repositories is all this needs, which is what a
+          # fork PR gets.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE: ${{ github.base_ref }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          set -euo pipefail
+          if [ -n "${BASE:-}" ]; then
+            git fetch --quiet origin "$BASE"
+            python3 scripts/validate_index.py \
+              --base-ref "origin/$BASE" \
+              --pr-author "$AUTHOR" \
+              --summary "$GITHUB_STEP_SUMMARY"
+          else
+            python3 scripts/validate_index.py \
+              --summary "$GITHUB_STEP_SUMMARY"
+          fi
