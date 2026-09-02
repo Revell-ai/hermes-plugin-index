@@ -183,6 +183,22 @@
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/better-colors",
       "api_version": 1,
       "added_at": "2026-09-01"
+    },
+    {
+      "name": "drag-to-pin-session",
+      "description": "Reorganize your pinned sessions with drag-and-drop. Drag a session into the Pinned section to pin it, or drag it out to unpin.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "sessions",
+        "sidebar"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "cdaec745540990de7d0c7c5a3ee73267687ac243",
+      "subdir": "plugins/drag-to-pin-session",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/drag-to-pin-session",
+      "api_version": 1,
+      "added_at": "2026-09-01"
     }
   ]
 }
