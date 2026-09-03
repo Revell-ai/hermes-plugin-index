@@ -229,7 +229,7 @@
         "statusbar"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "3100c599c9e4ec91591cfd357f8219845f31fa12",
+      "ref": "84dfb5bb049e2e2a219acb73354edc7e36e5bc10",
       "subdir": "plugins/provider-status",
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/provider-status",
       "capabilities": [
