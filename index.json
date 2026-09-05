@@ -298,6 +298,26 @@
       ],
       "api_version": 1,
       "added_at": "2026-09-01"
+    },
+    {
+      "name": "pstack",
+      "description": "Rigorous agent-engineering method for Hermes (45-skill agent-plugins-v1 portable package): poteto-mode router, verification playbooks, interrogation/reflect/recall loops, swarm/arena parallel workflows, and a 21-skill principle library. If you want to go fast, go deep first - pstack helps you write less, but higher quality code. Built from pinned upstream cursor/plugins pstack (MIT, Lauren Tan); scanner-clean; dual-loads on Cursor.",
+      "author": "iap",
+      "tags": [
+        "pstack",
+        "poteto-mode",
+        "workflow",
+        "principles",
+        "subagents",
+        "skills",
+        "quality"
+      ],
+      "repo": "iap/pstack-hermes",
+      "subdir": "pstack",
+      "ref": "deaca9154ef27617024032485a78d2350b2e261f",
+      "homepage": "https://github.com/iap/pstack-hermes",
+      "api_version": 1,
+      "added_at": "2026-09-05"
     }
   ]
 }
