@@ -25,6 +25,7 @@ Exit 0 clean, 1 blocking findings, 2 the checker itself could not run.
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import re
@@ -202,6 +203,159 @@ def network_checks(entry: dict, f: Findings) -> None:
                     "repository root.")
 
 
+# What a reader of an entry must be able to learn from it: whether installing
+# this reaches beyond itself once it runs.
+#
+# NOT whether it contains code. Shipping Python and JavaScript is what a plugin
+# IS, and an earlier draft of this check flagged nearly every entry in the
+# index for it -- which is worse than no check, because a rule that fires on
+# everything teaches people to skip reading it. It also charged existing
+# contributors for something nobody had asked of them.
+#
+# The two things that actually differ from "this plugin has code in it":
+#
+#   ACQUISITION -- the package fetches more code at runtime. What a reviewer
+#   read is then not what the user runs, and the pin in this index stops
+#   describing the payload.
+#
+#   DELEGATED AUTHORITY -- the package drives a CLI that is already logged in
+#   as the user. It inherits reach nobody granted it at install time, and the
+#   blast radius is whatever that tool can do.
+#
+# Both are legitimate. Neither is guessable from an entry that does not say so.
+RUNNABLE = (".ts", ".tsx", ".js", ".mjs", ".cjs", ".py", ".rb", ".sh", ".bash", ".ps1")
+
+# Capped so one enormous package cannot turn a review into a thousand reads.
+MAX_READS = 25
+
+ACQUIRES = re.compile(
+    r"\b(npm|pnpm|yarn|bun)\s+(install|add|ci)\b|\bnpx\b|\buvx\b|"
+    r"\bpip3?\s+install\b|\bgo\s+install\b|\bcargo\s+install\b|"
+    r"\bcurl\b[^\n]*\|\s*(sh|bash)\b", re.I)
+
+DELEGATES = re.compile(
+    r"[\"'`\s\[(](gh|aws|az|gcloud|kubectl|docker|heroku|vercel|netlify|stripe)"
+    r"[\"'`\s\]),]", re.I)
+
+DISCLOSES = re.compile(
+    r"\b(install|installs|fetch|fetches|download|downloads|npm|npx|bun|pip|"
+    r"dependenc\w+|gh\b|github cli|aws|kubectl|docker|cli|authenticat\w+)\b", re.I)
+
+
+def payload_checks(entry: dict, f: Findings) -> None:
+    """Read what a user would install, and hold the entry to describing it."""
+    who = entry.get("name") or "(entry with no name)"
+    repo = (entry.get("repo") or "").strip()
+    ref = (entry.get("ref") or "").strip()
+    if not REPO.match(repo) or not SHA.match(ref):
+        return
+
+    status, body = gh(f"/repos/{repo}/git/trees/{ref}?recursive=1")
+    if status == 0 or body is None:
+        f.ask(who, "could not read the tree to check the payload",
+              "Network failure during the run, not a finding about the entry. "
+              "Re-run before drawing a conclusion.")
+        return
+    if status != 200:
+        f.block(who, f"the tree at {ref[:12]}\u2026 could not be read (HTTP {status})",
+                "A payload nobody can read is a payload nobody reviewed.")
+        return
+
+    # A truncated tree is a fact about the request, not the package. Say so
+    # rather than reporting a clean scan of half of it.
+    if body.get("truncated"):
+        f.ask(who, "the tree came back truncated, so the payload was only partly scanned",
+              "Too many files for one read. Check the package by hand before merging.")
+        return
+
+    subdir = (entry.get("subdir") or "").strip("/")
+    prefix = f"{subdir}/" if subdir else ""
+    paths = [t["path"] for t in body.get("tree", [])
+             if t.get("type") == "blob" and t["path"].startswith(prefix)]
+    if not paths:
+        f.block(who, "the pinned tree contains no files under that path",
+                "An empty payload installs nothing. Check `subdir` and `ref`.")
+        return
+
+    def read(path):
+        st, blob = gh(f"/repos/{repo}/contents/{path}?ref={ref}")
+        if st != 200 or not blob:
+            return None
+        try:
+            return base64.b64decode(blob.get("content", "")).decode("utf-8", "replace")
+        except Exception:
+            return None
+
+    # Install-time execution, which no description can make safe: it runs
+    # before anyone has read anything, so there is no moment at which a user
+    # could see a disclosure and decline. Refused outright, not documented.
+    for mpath in [p for p in paths if p.endswith("package.json")][:6]:
+        raw = read(mpath)
+        if raw is None:
+            continue
+        try:
+            scripts = (json.loads(raw).get("scripts") or {})
+        except Exception:
+            continue
+        hooks = sorted(k for k in scripts if k in ("preinstall", "postinstall", "prepare"))
+        if hooks:
+            f.block(who, f"`{mpath}` defines {', '.join(hooks)}",
+                    "Install-time scripts run before anyone reads the entry, so "
+                    "no description can inform the decision. Ask for them "
+                    "removed, or for the work to move behind a command the user "
+                    "chooses to run.")
+
+    runnable = [p for p in paths if p.lower().endswith(RUNNABLE)]
+    if not runnable:
+        return
+    if len(runnable) > MAX_READS:
+        f.ask(who, f"has {len(runnable)} runnable files, more than this check reads",
+              f"Only the first {MAX_READS} were scanned. Read the rest by hand "
+              "before merging, and do not treat this run as a clean bill.")
+
+    acquires, delegates = [], []
+    for path in sorted(runnable)[:MAX_READS]:
+        text = read(path)
+        if text is None:
+            continue
+        if ACQUIRES.search(text):
+            acquires.append(path)
+        if DELEGATES.search(text):
+            delegates.append(path)
+
+    description = " ".join(str(entry.get(k) or "") for k in ("description", "tags"))
+    told = bool(DISCLOSES.search(description))
+
+    # These two route to a human rather than blocking, and the reason is not
+    # politeness. Reading text cannot tell an INVOCATION from a MENTION: a
+    # plugin whose whole subject is guarding tool use names `docker` and `aws`
+    # in a denylist, and an earlier draft of this check blocked it for that --
+    # reporting "drives an authenticated CLI" about a file that refuses to.
+    #
+    # A check that cannot prove its finding must not spend a contributor's
+    # time as though it had. It says what it saw, says what it cannot tell,
+    # and leaves the judgement with the person merging.
+    if acquires and not told:
+        shown = ", ".join(f"`{p}`" for p in acquires[:3])
+        f.ask(who, f"may fetch code at runtime, and the description does not "
+                   f"mention it: {shown}",
+              "If it does, what a reviewer read is not what the user runs, and "
+              "the pin stops describing the payload -- ask for the "
+              "`description` to say so. This check matches text and cannot "
+              "tell a real install from the word appearing in a comment, a "
+              "test, or a denylist. Open the file before asking for a change.")
+
+    if delegates and not told:
+        shown = ", ".join(f"`{p}`" for p in delegates[:3])
+        f.ask(who, f"may drive an already-authenticated CLI, and the "
+                   f"description does not mention it: {shown}",
+              "If it does, it inherits reach nobody granted it at install "
+              "time, and the entry should name the tool. Same caveat: this "
+              "matches text, not invocation, and a plugin that merely NAMES a "
+              "tool -- a denylist, a doc, a test fixture -- looks identical "
+              "here. Open the file first.")
+
+
 def house_rules(added, modified, removed, pr_author: str | None, f: Findings) -> None:
     """The README's House rules, and honesty about the one CI cannot settle."""
     touched = len(added) + len(modified) + len(removed)
@@ -321,6 +475,7 @@ def main() -> int:
                              f"has no `{field}`",
                              "Recommended, not required.")
             network_checks(entry, f)
+            payload_checks(entry, f)
 
     house_rules(added, modified, removed, args.pr_author, f)
 
