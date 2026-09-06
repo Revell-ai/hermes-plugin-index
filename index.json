@@ -301,7 +301,7 @@
     },
     {
       "name": "pstack",
-      "description": "Rigorous agent-engineering method for Hermes (45-skill agent-plugins-v1 portable package): poteto-mode router, verification playbooks, interrogation/reflect/recall loops, swarm/arena parallel workflows, and a 21-skill principle library. If you want to go fast, go deep first - pstack helps you write less, but higher quality code. Built from pinned upstream cursor/plugins pstack (MIT, Lauren Tan); scanner-clean; dual-loads on Cursor.",
+      "description": "Rigorous agent-engineering method for Hermes - a 45-skill agent-plugins-v1 portable package: poteto-mode router, verification playbooks, interrogation/reflect/recall loops, swarm/arena parallel workflows, and a 21-skill principle library (if you want to go fast, go deep first). Ships executable helper scripts under skills/poteto-mode/scripts/ that skills invoke at runtime - they call the bun and gh CLIs on the user's machine. Built from pinned upstream cursor/plugins pstack @ 93b00b8 (MIT, Lauren Tan). Not a straight port: upstream make-bot-ui is excluded (scanner verdict) and replaced by the locally authored skills/hermesbot (gateway webhook/send control surface). Dual-loads on Cursor.",
       "author": "iap",
       "tags": [
         "pstack",
