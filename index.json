@@ -280,6 +280,23 @@
       "added_at": "2026-09-01"
     },
     {
+"name": "iteration-budget-meter",
+      "description": "Status-bar chip that shows the focused session's per-turn iteration usage (N/60) while a turn runs, with turn peaks and the last cap-forced summary in a click popover.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "statusbar",
+        "iteration",
+        "budget"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "53fffb78c17e8d55b6103f2be5478a859ea18699",
+      "subdir": "plugins/iteration-budget-meter",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/iteration-budget-meter",
+      "api_version": 1,
+      "added_at": "2026-09-08"
+    },
+    {
       "name": "pstack",
       "description": "Rigorous agent-engineering method for Hermes - a 45-skill agent-plugins-v1 portable package: poteto-mode router, verification playbooks, interrogation/reflect/recall loops, swarm/arena parallel workflows, and a 21-skill principle library (if you want to go fast, go deep first). Ships executable helper scripts under skills/poteto-mode/scripts/ that skills invoke at runtime - they call the bun and gh CLIs on the user's machine. Built from pinned upstream cursor/plugins pstack @ 93b00b8 (MIT, Lauren Tan). Not a straight port: upstream make-bot-ui is excluded (scanner verdict) and replaced by the locally authored skills/hermesbot (gateway webhook/send control surface). Dual-loads on Cursor.",
       "author": "iap",
