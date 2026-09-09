@@ -298,6 +298,26 @@
       "homepage": "https://github.com/iap/pstack-hermes",
       "api_version": 1,
       "added_at": "2026-09-05"
+    },
+    {
+      "name": "reasoning-switch",
+      "description": "Statusbar reasoning-effort rotation: click the level word to cycle checked levels, gear opens a dialog with per-level themed colors, rotation checkboxes, and prompt limits that auto-demote to the next lower level.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "statusbar",
+        "reasoning",
+        "model"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/reasoning-switch",
+      "ref": "d7c4c703121d36353ca10b282d8ee9ba8ba87d5f",
+      "api_version": 1,
+      "added_at": "2026-09-05",
+      "capabilities": [
+        "statusbar",
+        "dialog"
+      ]
     }
   ]
 }
