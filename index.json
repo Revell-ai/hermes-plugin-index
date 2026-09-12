@@ -337,6 +337,25 @@
       ]
     },
     {
+      "name": "memory-review-command",
+      "description": "Native menu command that sends /memory pending when a staged write is waiting or a store is full. Grayed out when memory is clean. Never approves or discards entries.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "memory",
+        "commands"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/memory-review-command",
+      "ref": "d0cd09bb9b20eeeef6c29c0a39e7c192c41ddb14",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/memory-review-command",
+      "api_version": 1,
+      "added_at": "2026-09-12",
+      "capabilities": [
+        "desktop-ui"
+      ]
+    },
+    {
       "name": "vault-view",
       "description": "Local Markdown vault workspace for Hermes Desktop with search, editing, tabs, navigation history, outlines, tags, links, backlinks, and a graph; designed for vaults compatible with Obsidian.",
       "author": "ergoCogn sàrl",
