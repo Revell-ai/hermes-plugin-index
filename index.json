@@ -337,6 +337,24 @@
       ]
     },
     {
+      "name": "memory-review",
+      "description": "Dialog to checkbox staged memory writes and approve or reject them.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "memory"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/memory-review",
+      "ref": "c3f78c597c6fd4707138dfb075689322e1968235",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/memory-review",
+      "api_version": 1,
+      "added_at": "2026-09-12",
+      "capabilities": [
+        "desktop-ui"
+      ]
+    },
+    {
       "name": "vault-view",
       "description": "Local Markdown vault workspace for Hermes Desktop with search, editing, tabs, navigation history, outlines, tags, links, backlinks, and a graph; designed for vaults compatible with Obsidian.",
       "author": "ergoCogn sàrl",
