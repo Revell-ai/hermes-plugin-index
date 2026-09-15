@@ -373,6 +373,23 @@
       ],
       "api_version": 1,
       "added_at": "2026-09-10"
+    },
+    {
+      "name": "opaque-composer",
+      "description": "Keeps the desktop composer solid while you scroll through a conversation: it replaces the composer's translucent fill (normal and scrolled states) with the active theme's card color, so earlier messages stop bleeding through the input area. A namespaced stylesheet hooks the composer root slot and is removed when the plugin is disabled; dark, light, and glass themes all keep their look.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "composer",
+        "ui",
+        "accessibility"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/opaque-composer",
+      "ref": "e382ef35349a32a6e17d89cce61e1778002c2b8a",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/opaque-composer",
+      "api_version": 1,
+      "added_at": "2026-09-16"
     }
   ]
 }
