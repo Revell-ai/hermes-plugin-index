@@ -250,7 +250,7 @@
         "hooks"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "6d111c891fa6f32924ad774ea2354db8e1806f92",
+      "ref": "ffc44fddce0f89a60712e2932f329440812e5015",
       "subdir": "plugins/intelligent-tool-break",
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/intelligent-tool-break",
       "capabilities": [
