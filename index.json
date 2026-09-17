@@ -411,6 +411,22 @@
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/opaque-composer",
       "api_version": 1,
       "added_at": "2026-09-16"
+    },
+    {
+      "name": "compact-reasoning-label",
+      "description": "Keeps the composer's model pill to just the model name: the duplicated thinking-level word is stripped from the label so the effort level lives only in the reasoning dropdown beside it. Survives every React repaint with an idempotent guarded observer and never blanks the pill.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "composer",
+        "ui"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/compact-reasoning-label",
+      "ref": "946af32ad7ee9559298a2ffaf63a8289cd4aaafb",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/compact-reasoning-label",
+      "api_version": 1,
+      "added_at": "2026-09-17"
     }
   ]
 }
