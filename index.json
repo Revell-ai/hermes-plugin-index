@@ -241,7 +241,7 @@
       "added_at": "2026-09-01"
     },
     {
-      "name": "tool-break",
+      "name": "intelligent-tool-break",
       "description": "Never let a stalled tool call force you to cancel a long task. You can abort an in-flight call with /break, instruct with /break {message}, or force it to repeat with /again.",
       "author": "Apostol Apostolov",
       "tags": [
@@ -250,9 +250,9 @@
         "hooks"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "f7a2bd0622d4e582cd0a63b9f72aaeeb88843907",
-      "subdir": "plugins/tool-break",
-      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/tool-break",
+      "ref": "ffc44fddce0f89a60712e2932f329440812e5015",
+      "subdir": "plugins/intelligent-tool-break",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/intelligent-tool-break",
       "capabilities": [
         "commands"
       ],
@@ -280,7 +280,7 @@
       "added_at": "2026-09-01"
     },
     {
-"name": "iteration-budget-meter",
+      "name": "iteration-budget-meter",
       "description": "Status-bar chip that shows the focused session's per-turn iteration usage (N/60) while a turn runs, with turn peaks and the last cap-forced summary in a click popover.",
       "author": "Apostol Apostolov",
       "tags": [
