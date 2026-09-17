@@ -357,7 +357,10 @@ def payload_checks(entry: dict, f: Findings) -> None:
 
 
 def house_rules(added, modified, removed, pr_author: str | None, f: Findings) -> None:
-    """The README's House rules, and honesty about the one CI cannot settle."""
+    """The README's House rules, and honesty about the one CI cannot settle.
+
+    A detected rename (see main) has already been folded into `modified`.
+    """
     touched = len(added) + len(modified) + len(removed)
     if touched > 1:
         names = sorted(e.get("name", "?") for e in added + modified + removed)
@@ -476,6 +479,25 @@ def main() -> int:
                              "Recommended, not required.")
             network_checks(entry, f)
             payload_checks(entry, f)
+
+    # A rename is one plugin moving: exactly one entry leaves and one arrives,
+    # and the survivor fields agree. Fold it into a modification of the new
+    # entry so the one-plugin-per-PR rule counts it once (house_rules).
+    if len(removed) == 1 and len(added) == 1 and not modified:
+        old, new = removed[0], added[0]
+
+        def _same_plugin(a: dict, b: dict) -> bool:
+            if a.get("repo") != b.get("repo") or a.get("author") != b.get("author"):
+                return False
+            sub_a = (a.get("subdir") or "").rsplit("/", 1)[0]
+            sub_b = (b.get("subdir") or "").rsplit("/", 1)[0]
+            return (sub_a == sub_b
+                    or (a.get("description") and a.get("description") == b.get("description")))
+
+        if _same_plugin(old, new):
+            modified.append(new)
+            added.clear()
+            removed.clear()
 
     house_rules(added, modified, removed, args.pr_author, f)
 
