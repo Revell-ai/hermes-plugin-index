@@ -355,6 +355,27 @@
       ]
     },
     {
+      "name": "rss-reader",
+      "description": "Three-column RSS reader with folders, reader-mode capture, feed-wide mute rules, keyboard navigation, and `/rss` commands for refresh, grading refinement, and subscription discovery.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "rss",
+        "reader",
+        "feeds"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/rss-reader",
+      "ref": "2e92af81fce3d63514424556f9adf68f15b72f95",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/rss-reader",
+      "api_version": 1,
+      "added_at": "2026-09-16",
+      "capabilities": [
+        "desktop-ui",
+        "slash-command"
+      ]
+    },
+    {
       "name": "vault-view",
       "description": "Local Markdown vault workspace for Hermes Desktop with search, editing, tabs, navigation history, outlines, tags, links, backlinks, and a graph; designed for vaults compatible with Obsidian.",
       "author": "ergoCogn sàrl",
