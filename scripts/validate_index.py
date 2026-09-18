@@ -425,7 +425,7 @@ def main() -> int:
         print("index.json parsed but contains no entries", file=sys.stderr)
         return 2
 
-    canonical = json.dumps(doc, indent=2) + "\n"
+    canonical = json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
     if text != canonical:
         f.advise(args.file, "is not formatted as 2-space JSON",
                  "Re-serialise with 2-space indent so diffs stay reviewable. "
