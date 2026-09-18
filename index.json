@@ -171,8 +171,8 @@
       "added_at": "2026-08-31"
     },
     {
-      "name": "better-colors",
-      "description": "Improve your session list with full name color, bolding, and a Codicon icon when a session is idle.",
+      "name": "better-session-appearance",
+      "description": "Improve your session list with full name color, bolding, a Codicon idle icon, and Auto Rules for future titles.",
       "author": "Apostol Apostolov",
       "tags": [
         "desktop",
@@ -180,9 +180,9 @@
         "sessions"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "a3c172f2ddcbcb4486b600623d32f98d01df3c67",
-      "subdir": "plugins/better-colors",
-      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/better-colors",
+      "ref": "cd8819d1c914c2c3fd01dd8066b823ceb443420b",
+      "subdir": "plugins/better-session-appearance",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/better-session-appearance",
       "api_version": 1,
       "added_at": "2026-09-01"
     },
