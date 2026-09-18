@@ -427,6 +427,22 @@
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/compact-reasoning-label",
       "api_version": 1,
       "added_at": "2026-09-17"
+    },
+    {
+      "name": "sidebar-manager",
+      "description": "Reorder and hide sidebar nav rows and session sections from a dim list-ordered glyph next to New session. Click to enter edit mode, click a section to turn it off, drag grip handles for live HTML5 reordering. Off items hide when you leave edit mode. New session stays first; search results do not scramble the layout.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "sidebar",
+        "sessions"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "plugins/sidebar-manager",
+      "ref": "c7e84597ecc12d3dff9fde4984033fc912b9aa87",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/sidebar-manager",
+      "api_version": 1,
+      "added_at": "2026-09-17"
     }
   ]
 }
