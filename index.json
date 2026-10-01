@@ -462,6 +462,25 @@
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/better-capabilities",
       "api_version": 1,
       "added_at": "2026-09-17"
+    },
+    {
+      "name": "prompt-enhance",
+      "description": "Rewrite a composer draft outside the chat and put the finished prompt back in the field. Saved prompts stay in a library. A one-call model pick does not change the session.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "composer",
+        "prompts"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "public/prompt-enhance",
+      "ref": "f9f63ddb318932421235ceffc66051fe6654a574",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/prompt-enhance",
+      "api_version": 1,
+      "added_at": "2026-10-01",
+      "capabilities": [
+        "desktop-ui"
+      ]
     }
   ]
 }
