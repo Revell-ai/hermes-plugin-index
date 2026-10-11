@@ -345,9 +345,9 @@
         "memory"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "subdir": "plugins/memory-review",
-      "ref": "c3f78c597c6fd4707138dfb075689322e1968235",
-      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/memory-review",
+      "subdir": "public/memory-review",
+      "ref": "38c3e911f38544bf8188b564874addbb3f988322",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/memory-review",
       "api_version": 1,
       "added_at": "2026-09-12",
       "capabilities": [
