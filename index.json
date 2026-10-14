@@ -356,7 +356,7 @@
     },
     {
       "name": "rss-reader",
-      "description": "Three-column RSS reader with folders, reader-mode capture, feed-wide mute rules, keyboard navigation, and `/rss` commands for refresh, grading refinement, and subscription discovery.",
+      "description": "Three-column RSS reader with folders, reader-mode capture, feed-wide mute rules, keyboard navigation, a daily-digest automation blueprint, Telegram and Discord digest posts with inline buttons, and `/rss` commands.",
       "author": "Apostol Apostolov",
       "tags": [
         "desktop",
@@ -366,7 +366,7 @@
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
       "subdir": "public/rss-reader",
-      "ref": "95995e853e9c71c096216601dabc96a9cac84e45",
+      "ref": "098b8285774f5315641d43de6b21bef0827fe598",
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/rss-reader",
       "api_version": 1,
       "added_at": "2026-09-16",
