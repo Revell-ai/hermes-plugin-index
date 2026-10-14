@@ -222,7 +222,7 @@
     },
     {
       "name": "provider-status",
-      "description": "Unified multi-provider quota usage tracking in the status bar, with support for OAuth, color-based warnings, and multiple accounts per provider with Hermes key rotation on exhaust.",
+      "description": "Unified multi-provider quota usage tracking in the status bar, with support for OAuth, color-based warnings, and multiple accounts per provider. This edition does not rotate Hermes environment keys on exhaust.",
       "author": "Apostol Apostolov",
       "tags": [
         "desktop",
@@ -231,9 +231,9 @@
         "statusbar"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "4bed326479f0de89c4b0d6105c11b9da25addb5d",
-      "subdir": "personal/provider-status",
-      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/personal/provider-status",
+      "ref": "6f87e692396290866b91ea1914c31d6e3cc77864",
+      "subdir": "public/provider-status",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/provider-status",
       "capabilities": [
         "dashboard"
       ],
