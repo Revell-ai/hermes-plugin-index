@@ -464,25 +464,6 @@
       "added_at": "2026-09-17"
     },
     {
-      "name": "better-capabilities",
-      "description": "Delete plugins and skills from Capabilities, zip a learned skill, save on/off presets, and apply them with /preset.",
-      "author": "Apostol Apostolov",
-      "tags": [
-        "desktop",
-        "capabilities",
-        "skills",
-        "plugins",
-        "ui",
-        "commands"
-      ],
-      "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "subdir": "plugins/better-capabilities",
-      "ref": "5d8f52f543c539bb8690907b4f730a0a75d9f8b0",
-      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/plugins/better-capabilities",
-      "api_version": 1,
-      "added_at": "2026-09-17"
-    },
-    {
       "name": "prompt-enhance",
       "description": "Rewrite a composer draft outside the chat and put the finished prompt back in the field. Saved prompts stay in a library. A one-call model pick does not change the session.",
       "author": "Apostol Apostolov",
