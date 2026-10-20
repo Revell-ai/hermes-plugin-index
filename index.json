@@ -231,7 +231,7 @@
         "statusbar"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "35af68dea6cc0fa0688689f886ba0ac9400170c0",
+      "ref": "9108efca321d73b39088d25b6a8400e0f4efb7ff",
       "subdir": "public/provider-status",
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/provider-status",
       "capabilities": [
@@ -250,7 +250,7 @@
         "hooks"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "7a2ee6256dc4ba7276c2f2947b9e4fcb67991cec",
+      "ref": "c0445f956ee581a49972c5333467b96b264f9172",
       "subdir": "public/intelligent-tool-break",
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/intelligent-tool-break",
       "capabilities": [
