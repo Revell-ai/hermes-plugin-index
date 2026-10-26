@@ -541,6 +541,25 @@
       ],
       "api_version": 1,
       "added_at": "2026-10-21"
+    },
+    {
+      "name": "agent-reel",
+      "description": "Turns your own Hermes session history into a grounded comic: every line cited to the messages that state it, 55 art styles, pages drawn by your own image model.",
+      "author": "Sahil Saghir",
+      "tags": [
+        "comics",
+        "story",
+        "history",
+        "images"
+      ],
+      "repo": "Sahil-SS9/agent-reel",
+      "ref": "df8f5fe2f262d8c04012093821423bb9b13128ac",
+      "homepage": "https://github.com/Sahil-SS9/agent-reel",
+      "capabilities": [
+        "commands"
+      ],
+      "api_version": 1,
+      "added_at": "2026-10-26"
     }
   ]
 }
