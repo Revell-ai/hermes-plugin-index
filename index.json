@@ -89,10 +89,10 @@
     },
     {
       "name": "hypergrok",
-      "description": "Turn your agent into a 7-role Hyperliquid trading desk: research, risk, ticketed execution and review. Portable Agent Plugin v1.5.0 with seventeen skills and seven role prompts. Includes read-only Python diagnostics; exchange writes require verified native approval coverage and ticket approval.",
+      "description": "Turn your agent into a 7-role Hyperliquid trading desk: research, risk, ticketed execution and review. Portable Agent Plugin v1.7.0 with seventeen skills and seven role prompts. Includes read-only Python diagnostics; exchange writes require verified native approval coverage and ticket approval.",
       "author": "Galleon Labs",
       "repo": "galleonlabs/hypergrok-trading-desk",
-      "ref": "5eb1d9a82157440d64f25a72cd06d9f3977dc472",
+      "ref": "63d7eae55741e2197561b4f52227ed2c97f32e01",
       "homepage": "https://galleonlabs.io",
       "tags": [
         "hypergrok",
