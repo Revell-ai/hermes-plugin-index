@@ -541,6 +541,27 @@
       ],
       "api_version": 1,
       "added_at": "2026-10-21"
+    },
+    {
+      "name": "better-capabilities",
+      "description": "Delete and package skills, browse their markdown files, and save per-profile on/off presets from one Settings page.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "capabilities",
+        "skills",
+        "plugins",
+        "ui"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "184725016633448af8f1c12f326529516b948ad3",
+      "subdir": "public/better-capabilities",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/better-capabilities",
+      "capabilities": [
+        "dashboard"
+      ],
+      "api_version": 1,
+      "added_at": "2026-10-27"
     }
   ]
 }
