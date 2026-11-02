@@ -606,6 +606,28 @@
       ],
       "api_version": 1,
       "added_at": "2026-11-01"
+    },
+    {
+      "name": "cdp-manager",
+      "description": "Local Chrome DevTools Protocol debug ports in the status bar: see each port's health, launch it windowed or headless, stop it with a clean Browser.close, and recheck it. Each port keeps a profile (Hermes isolated, a personal Chrome profile when that Chrome is closed, or Guest), and one port can be managed by a backend supervisor that keeps it up. The cdp agent tool does the same from chat, and its wedged/unwedge actions detect and repair a Chrome profile-picker launch, where every CDP client fails with Failed to open a new tab. Windows only.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "cdp",
+        "browser",
+        "statusbar"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "public/cdp-manager",
+      "ref": "cc37e7fe4574f506d1a58d775794c6ea1e260860",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/cdp-manager",
+      "capabilities": [
+        "tools",
+        "desktop-ui",
+        "statusbar"
+      ],
+      "api_version": 1,
+      "added_at": "2026-11-01"
     }
   ]
 }
