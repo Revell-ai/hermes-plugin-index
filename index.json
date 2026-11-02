@@ -562,6 +562,27 @@
       ],
       "api_version": 1,
       "added_at": "2026-10-27"
+    },
+    {
+      "name": "reddit",
+      "description": "Reddit with your own account behind it: bring your own Reddit API app, log in once, then read listings, search, threads and the inbox, post, comment, vote, save and subscribe under that account, plus a reddit_api passthrough for moderation, modmail, wiki and flair.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "reddit",
+        "social",
+        "oauth",
+        "api"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "f19e30a438b5886cc90de94665f845adf48fca26",
+      "subdir": "public/reddit",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/reddit",
+      "capabilities": [
+        "tools",
+        "desktop-ui"
+      ],
+      "api_version": 1,
+      "added_at": "2026-10-31"
     }
   ]
 }
