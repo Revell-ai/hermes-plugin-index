@@ -583,6 +583,29 @@
       ],
       "api_version": 1,
       "added_at": "2026-10-31"
+    },
+    {
+      "name": "hermes-jev-routing",
+      "description": "Per-turn model routing from TypeSafe Jev: Jev reads the turn, picks the capability tier it deserves, and the plugin rewrites the model and the reasoning level on the request that is about to go out. Shadow by default, with notify, confirm and auto modes, a strip under the composer for the turn that was just routed, and a spend ledger. A pick on another provider is reported rather than sent; in Hermes Desktop the approve row moves the session instead. Once a routing JSON is configured it sends the message, a short history excerpt, the model name, an estimated context size and the spend snapshot to TypeSafe.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "routing",
+        "models",
+        "reasoning",
+        "middleware",
+        "budget"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "subdir": "public/hermes-jev-routing",
+      "ref": "8f6c18ea5716c20d7828e1aa63f31a69c6592a7d",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/hermes-jev-routing",
+      "capabilities": [
+        "tools",
+        "hooks",
+        "desktop-ui"
+      ],
+      "api_version": 1,
+      "added_at": "2026-11-01"
     }
   ]
 }
