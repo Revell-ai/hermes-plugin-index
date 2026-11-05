@@ -631,7 +631,7 @@
     },
     {
       "name": "voice-gate",
-      "description": "Personal edition: reviews changed prose with 75 mechanical families, optional humanizer model review, protected-content checks, and at most two revision opportunities. Includes writing profiles, Vale, file exceptions, grouped settings, and bounded local diagnostics (10 MiB backend logs per Hermes home; 128 settings events within 64 KiB). Model review uses the configured provider; no authorship claim.",
+      "description": "Personal edition: reviews changed prose with 75 mechanical families, optional humanizer model review, protected-content checks, and at most two revision opportunities. Includes writing profiles, Vale behind your approval, file exceptions, grouped settings, and bounded local diagnostics (10 MiB backend logs per Hermes home; 128 settings events within 64 KiB). Vale runs with a reduced environment and only an executable you approved, matched by digest. Plugin data follows the profile the host is serving. Model review uses the configured provider; no authorship claim.",
       "author": "Apostol Apostolov",
       "tags": [
         "writing",
@@ -641,7 +641,7 @@
         "lint"
       ],
       "repo": "apoapostolov/hermes-agent-awesome-plugins",
-      "ref": "00f00a483c1799c3d7b6f3a280a100fc0c8c156a",
+      "ref": "f13ead2f01eb90fa97f99f78cc11aff397f40cf4",
       "subdir": "personal/voice-gate",
       "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/personal/voice-gate",
       "capabilities": [
