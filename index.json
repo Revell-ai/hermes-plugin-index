@@ -396,7 +396,7 @@
     },
     {
       "name": "vault-view",
-      "description": "Local Markdown vault workspace for Hermes Desktop with visual editing, progressive reading, cached image previews, shared tabs, tag search, links, backlinks and a graph; compatible with Obsidian vaults.",
+      "description": "Local Markdown vault workspace for Hermes Desktop with visual editing, progressive reading, cached image previews, shared tabs, tag search, links, backlinks and a graph; compatible with Obsidian vaults. Includes explicitly requested portable Markdown attachments with native file cards and enhanced Vault View actions on Desktop.",
       "author": "ergoCogn sàrl",
       "tags": [
         "desktop",
@@ -406,10 +406,11 @@
         "obsidian"
       ],
       "repo": "ergocogn/hermes-desktop-plugin-vault-view",
-      "ref": "532c9b95f204cafb224e33c8075c4a774ad6f7eb",
+      "ref": "224c5b5ad8cef5ffd4884216d16c8481077407d8",
       "homepage": "https://github.com/ergocogn/hermes-desktop-plugin-vault-view",
       "capabilities": [
-        "desktop-ui"
+        "desktop-ui",
+        "tools"
       ],
       "api_version": 1,
       "added_at": "2026-09-10"
