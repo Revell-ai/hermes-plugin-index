@@ -697,6 +697,27 @@
       ],
       "api_version": 1,
       "added_at": "2026-11-17"
+    },
+    {
+      "name": "byparr-mcp",
+      "description": "Portable MCP companion to byparr-tools: a dependency-free stdio server exposing solver_get, solver_cookies, solver_load and solver_status to Codex, mcporter and other MCP clients, so a FlareSolverr-compatible solver you run yourself is reachable outside Hermes. The solver URL is forwarded from the plugin Settings page as BYPAAR_BASE_URL. Disclosure: outbound HTTP goes to the solver address you configure and the URLs you ask it to fetch; cookie values stay hidden unless showValues is true.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "solver",
+        "cloudflare",
+        "byparr",
+        "flaresolverr",
+        "mcp"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "4f1802285f452d6d7fd29ba23c2435189c3c1acb",
+      "subdir": "personal/byparr-mcp",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/personal/byparr-mcp",
+      "capabilities": [
+        "tools"
+      ],
+      "api_version": 1,
+      "added_at": "2026-11-17"
     }
   ]
 }
