@@ -674,6 +674,29 @@
       ],
       "api_version": 1,
       "added_at": "2026-11-16"
+    },
+    {
+      "name": "byparr-tools",
+      "description": "Nine first-class Hermes tools for any FlareSolverr-compatible solver you run yourself: solved HTML, challenge cookies bridged into a browser over CDP, batch clean text for RAG, health status, structured extraction, a fetch with solver fallback, and a session-scoped cookie jar. A fail-open tool_execution middleware retries walled web_extract or browser_exec results through the solver. Disclosure: outbound HTTP goes to the solver address you configure, an optional CDP browser endpoint, and the URLs you ask it to fetch. Stays inside the plugin SDK with no pip dependencies.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "solver",
+        "cloudflare",
+        "byparr",
+        "flaresolverr",
+        "web",
+        "scraping"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "4f1802285f452d6d7fd29ba23c2435189c3c1acb",
+      "subdir": "personal/byparr-tools",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/personal/byparr-tools",
+      "capabilities": [
+        "tools",
+        "hooks"
+      ],
+      "api_version": 1,
+      "added_at": "2026-11-17"
     }
   ]
 }
