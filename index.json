@@ -651,6 +651,29 @@
       ],
       "api_version": 1,
       "added_at": "2026-11-04"
+    },
+    {
+      "name": "hermes-next-steps",
+      "description": "A reply that ends by asking whether to go on becomes two to six chips under it: click one to send it as your next message, tick several to send them together, and options a decision classifier reads as worth taking now arrive tagged Recommended and pre-ticked. Carried-forward options from earlier replies ride along with an age label and a dismiss cross. The classifier is optional, so with none loaded the chips work unmarked. Disable Follow-up Chips first: it draws the same slot.",
+      "author": "Apostol Apostolov",
+      "tags": [
+        "desktop",
+        "chips",
+        "replies",
+        "next-steps",
+        "ux"
+      ],
+      "repo": "apoapostolov/hermes-agent-awesome-plugins",
+      "ref": "2629dffaf8c133c64e995e4fd08f14a4cc8a4f09",
+      "subdir": "public/hermes-next-steps",
+      "homepage": "https://github.com/apoapostolov/hermes-agent-awesome-plugins/tree/main/public/hermes-next-steps",
+      "capabilities": [
+        "tools",
+        "hooks",
+        "desktop-ui"
+      ],
+      "api_version": 1,
+      "added_at": "2026-11-16"
     }
   ]
 }
